@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:androidhj="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="connecticus.chat.ChatBubbleActivity">
+
+
+    <ListView
+        android:id="@+id/listView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="50dp" />
+
+    <RelativeLayout
+        android:id="@+id/form"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:longClickable="false"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/chatText"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:ems="10"
+            android:inputType="textMultiLine" />
+
+        <ImageButton
+            android:id="@+id/bSpeak"
+            android:onClick="speakerButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/chatText"
+            android:layout_marginLeft="25dp"
+            android:background="@null"
+            android:longClickable="false"
+            android:maxWidth="20dp"
+            android:minWidth="20dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/micon" />
+
+        <ImageButton
+            android:id="@+id/buttonSend"
+            android:onClick="sendButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/bSpeak"
+            android:layout_marginLeft="10dp"
+            android:layout_toEndOf="@+id/bSpeak"
+            android:background="@null"
+            android:scaleType="fitCenter"
+            android:src="@drawable/iconstart" />
+    </RelativeLayout>
+</RelativeLayout>
